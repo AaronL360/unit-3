@@ -13,7 +13,16 @@
 function getNumbersInRange(start, end) {
   
   
+   // Initialize an empty array to store the numbers
+  const result = [];
   
+  // Loop from the start number to the end number, inclusive
+  for (let i = start; i <= end; i++) {
+    result.push(i);
+  }
+  
+  // Return the populated array
+  return result;
   // TODO: your code here
 
 }
@@ -27,7 +36,12 @@ console.log(getNumbersInRange(3, 8));  // [3, 4, 5, 6, 7, 8]
 // Return the sum of every integer from start to end, inclusive.
 // Use the accumulator pattern: let total = 0; total += i; each pass.
 function sumRange(start, end) {
-  // TODO: your code here
+  
+const result = [];
+
+  for (let i = start; i <= end; i++){
+result.reduce ((accumulator, CurrentValue) => accumulator + CurrentValue, 0);
+  }
 
 }
 
