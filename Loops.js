@@ -37,12 +37,13 @@ console.log(getNumbersInRange(3, 8));  // [3, 4, 5, 6, 7, 8]
 // Use the accumulator pattern: let total = 0; total += i; each pass.
 function sumRange(start, end) {
   
-const result = [];
-
-  for (let i = start; i <= end; i++){
-result.reduce ((accumulator, CurrentValue) => accumulator + CurrentValue, 0);
+let total = 0;
+  // Loop from start to end, inclusive
+  for (let i = start; i <= end; i++) {
+    total += i; // Add each integer to the total
   }
-
+  // Return the final sum
+  return total;
 }
 
 console.log(sumRange(1, 5));   // 15
@@ -54,8 +55,13 @@ console.log(sumRange(4, 4));   // 4
 // Return an array counting down from n to 1.
 // Use a while loop, not a for loop.
 function countdown(n) {
-  // TODO: your code here
-
+let result = [];
+let current = n;
+while (current >=1){
+  result.push(current);
+  current--;
+}
+return result;
 }
 
 console.log(countdown(5)); // [5, 4, 3, 2, 1]
