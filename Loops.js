@@ -75,8 +75,23 @@ console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1]
 // check whether that character is a vowel. Access a character with
 // str[i] or str.charAt(i).
 function countVowels(str) {
-  // TODO: your code here
+ 
+  // Initialize a counter to keep track of the vowels
+  let count = 0;
 
+  // Loop through every index of the string
+  for (let i = 0; i < str.length; i++) {
+    // Access the character at the current index
+    let char = str[i];
+
+    // Check whether that character is a lowercase vowel
+    if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+      count++;
+    }
+  }
+
+  // Return the total number of vowels found
+  return count;
 }
 
 console.log(countVowels("hello"));      // 2
@@ -91,7 +106,27 @@ console.log(countVowels("aeiou"));      // 5
 // products separated by spaces. Needs a loop inside a loop —
 // build each row as its own string before adding it to the result.
 function multiplicationTable(n) {
-  // TODO: your code here
+   let result = "";
+
+  // Outer loop controls the rows
+  for (let i = 1; i <= n; i++) {
+    let row = "";
+
+    // Inner loop builds the current row string
+    for (let j = 1; j <= n; j++) {
+      row += (i * j) + " ";
+    }
+
+    // Remove the trailing space and add the row to the result
+    result += row.trim();
+
+    // Add a newline character if it's not the last row
+    if (i < n) {
+      result += "\n";
+    }
+  }
+
+  return result;
 
 }
 
