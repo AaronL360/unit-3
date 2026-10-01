@@ -143,8 +143,18 @@ console.log(multiplicationTable(5));
 // candidate % divisor === 0. A boolean flag that flips to false
 // when a divisor is found works well here.
 function primesUnder(limit) {
-  // TODO: your code here
+const result = [];
+  
+  // Loop from the start number to the end number, inclusive
+  for (let i = 1; i <= limit; i++) {
+    if (i % 2 === 0 || i % 3 === 0){
+      
+    } else if(2 < i < 4){
+       result.push(i);
+    } else if 
 
+  // Return the populated array
+  return result;
 }
 
 console.log(primesUnder(10)); // [2, 3, 5, 7]

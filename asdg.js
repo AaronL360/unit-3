@@ -1,5 +1,3 @@
-const sports = ["soccer", "baseball"];
-const total = sports.push("football", "swimming");
-
-console.log(sports); // ['soccer', 'baseball', 'football', 'swimming']
-console.log(total); // 4
+for (let i = 0; i <= 5; i++) {
+    console.log("Iteration number: " + i);
+}
