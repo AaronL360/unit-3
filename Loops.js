@@ -147,12 +147,17 @@ const result = [];
   
   // Loop from the start number to the end number, inclusive
   for (let i = 1; i <= limit; i++) {
-    if (i % 2 === 0 || i % 3 === 0){
-      
-    } else if(2 < i < 4){
+    if (i % 2 === 1 && i % 3 === 0){
        result.push(i);
-    } else if 
+    } else if (i % 2 === 0 && i % 3 === 1){
+      result.push(i);
+    } else if (i % 2 !== 0 && i % 3 !== 0){
+      result.push(i);
+    }
+    
+  }
 
+  
   // Return the populated array
   return result;
 }
