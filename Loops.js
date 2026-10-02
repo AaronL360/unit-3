@@ -147,14 +147,27 @@ const result = [];
   
   // Loop from the start number to the end number, inclusive
   for (let i = 1; i <= limit; i++) {
-    if (i % 2 === 1 && i % 3 === 0){
-       result.push(i);
-    } else if (i % 2 === 0 && i % 3 === 1){
-      result.push(i);
-    } else if (i % 2 !== 0 && i % 3 !== 0){
-      result.push(i);
+  const primes = [];
+
+  // Loop through every candidate number starting from 2 up to (but not including) the limit
+  for (let candidate = 2; candidate < limit; candidate++) {
+    let isPrime = true;
+
+    // Check for divisors from 2 up to (but not including) the candidate
+    for (let divisor = 2; divisor < candidate; divisor++) {
+      if (candidate % divisor === 0) {
+        isPrime = false;
+        break; // Stop checking once a divisor is found
+      }
     }
-    
+
+    // If no divisors were found, the number is prime
+    if (isPrime) {
+      primes.push(candidate);
+    }
+  }
+
+  return primes;
   }
 
   
