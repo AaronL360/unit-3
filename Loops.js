@@ -118,7 +118,8 @@ function multiplicationTable(n) {
     }
 
     // Remove the trailing space and add the row to the result
-    result += row.trim();
+    //
+  result += row.trim();
 
     // Add a newline character if it's not the last row
     if (i < n) {
