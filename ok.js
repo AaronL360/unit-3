@@ -8,8 +8,9 @@
 //1. Which wizard did the wand obey after all duels?
 //2. How many different wizards did the wand obey?
 
-function SorceryFight (W, F){
+function SorceryFight (N, W, F){
     
 }
 
-console.log ()
+console.log (SorceryFight(3, "A", "B"));
+
